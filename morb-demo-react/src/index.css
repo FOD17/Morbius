@@ -1,0 +1,299 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: auto;
+  background-color: #16161a;
+}
+
+img {
+  display: none;
+}
+
+header {
+  background-color: #16161a;
+  text-align: center;
+  color: #fffffe;
+  height: 125px;
+}
+
+li {
+  display: inline;
+}
+
+button {
+  background-color: #417df4;
+  color: #16161a;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  border: 1px solid white;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+li:last-child > button {
+  background-color: #f44141;
+  color: #16161a;
+  font-weight: 600;
+}
+
+.hero {
+  background-image: url('assets/morb.jpg');
+  background-repeat: no-repeat;
+  background-position: 35% 0%;
+  position: relative;
+  height: 675px;
+}
+
+.hero-info {
+  color: #fffffe;
+}
+
+.hero-info > button {
+  background-color: #f44141;
+  color: #16161a;
+  font-weight: 600;
+}
+
+.ratings {
+  margin-top: 40px;
+  display: flex;
+  background-color: #72757e;
+}
+
+.ratings > h3,
+p {
+  color: #fffffe;
+}
+
+.fa-star {
+  font-size: 45px;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+  color: #2cb67d;
+}
+
+.review-header {
+  margin: 40px 0px;
+  text-align: center;
+  color: white;
+}
+
+.reviews {
+  display: flex;
+}
+
+.review {
+  color: white;
+  border: 1.5px solid #c09d12;
+  border-radius: 4px;
+}
+
+footer {
+  margin-top: 20px;
+  background-color: #72757e;
+  text-align: center;
+}
+
+footer > .fa-cc-visa,
+.fa-cc-mastercard,
+.fa-cc-amex,
+.fa-bitcoin-sign,
+.fa-stripe {
+  font-size: 45px;
+  padding: 10px;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+  color: #2cb67d;
+}
+
+/*
+********************************************************************************************************
+********************************************************************************************************
+********************************************************************************************************
+********************************************************************************************************
+*/
+
+/* phone view */
+@media only screen and (min-width: 300px) {
+  h2 {
+    font-size: 39px;
+  }
+
+  h3 {
+    font-size: 30px;
+  }
+
+  p {
+    font-size: 20px;
+  }
+
+  ul {
+    margin-top: 20px;
+    padding-left: 10px;
+  }
+
+  li {
+    padding: 10px;
+  }
+
+  .hero {
+    position: relative;
+  }
+
+  .hero-bar {
+    width: 300px;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .hero-info > button {
+    margin-top: 50px;
+  }
+
+  .ratings {
+    height: 300px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .ratings > h3,
+  p {
+    margin-bottom: 20px;
+  }
+
+  .reviews {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .review {
+    margin-top: 20px;
+    width: 90%;
+  }
+
+  .review > p {
+    padding: 5px;
+  }
+}
+
+/*
+********************************************************************************************************
+********************************************************************************************************
+********************************************************************************************************
+********************************************************************************************************
+*/
+
+/* tablet view */
+@media only screen and (min-width: 768px) {
+  h2 {
+    font-size: 45px;
+  }
+
+  h3 {
+    font-size: 38px;
+  }
+
+  p {
+    font-size: 30px;
+  }
+
+  ul {
+    display: inherit;
+  }
+
+  img {
+    display: inline;
+    max-width: 100%;
+    height: auto;
+  }
+
+  header {
+    padding: 20px 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  header > h1 {
+    margin-right: auto;
+    font-size: 45px;
+  }
+
+  .hero {
+    background-image: none;
+    background-repeat: no-repeat;
+    position: static;
+    background-position: initial;
+    height: initial;
+  }
+
+  .hero-bar {
+    width: inherit;
+    position: static;
+    top: initial;
+    left: initial;
+    transform: initial;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-info {
+    margin: 40px 0px;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/*
+********************************************************************************************************
+********************************************************************************************************
+********************************************************************************************************
+********************************************************************************************************
+*/
+
+/* desktop view */
+@media only screen and (min-width: 1200px) {
+  button {
+    padding: 20px;
+    font-size: 23px;
+  }
+
+  .hero-bar {
+    background-color: #37374154;
+    padding: 20px 0px;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  .reviews {
+    max-width: 2000px;
+    margin: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .review {
+    width: 40%;
+    margin: 5px;
+    min-height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  footer {
+    height: 50px;
+  }
+}
